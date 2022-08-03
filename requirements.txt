@@ -7,3 +7,4 @@ mysqlclient
 python-decouple
 uritemplate
 drf-spectacular
+.
