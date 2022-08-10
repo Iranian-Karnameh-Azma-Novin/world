@@ -15,4 +15,8 @@ urlpatterns = [
     path("logins",views.Login,name = "login"),
 	path("login/",include ("django.contrib.auth.urls"),),
     path("logout",views.Logout,name = "logout"),
+    path("newcode",views.New_Code.as_view(),name = "newcode"),
+    path("setpassword",views.Set_Password.as_view(),name = "setpassword"),
+    path("resetpassword",views.New_Password.as_view(),name = "reset"),
+
 ]

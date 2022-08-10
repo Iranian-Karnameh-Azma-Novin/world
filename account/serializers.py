@@ -36,3 +36,21 @@ class OtpCodeSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = OtpCode
 		fields = ('code',)
+
+
+class PhoneSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = OtpCode
+		fields = ('phone_number',)
+
+
+
+class SetPasswordSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = User
+		fields = ('password',)
+		extra_kwargs = {
+			'password': {'write_only':True},
+		}
